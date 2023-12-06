@@ -1,13 +1,25 @@
 ---
-layout: post
-title: Generic
-description: Lorem ipsum dolor est
-image: assets/images/pic11.jpg
+layout: landing
+title: Who We Are
+description: Results are only as good as the team that compiles them
+image: assets/images/who_we_are/cat_foot.jpg
 nav-menu: true
 ---
 
-Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.
+<!-- Main -->
+<div id="main">
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h2> Collaboration is the key to humanity's success</h2>
+		</header>
 
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.
+		<p> <span class="image left"><img src="{% link assets/images/who_we_are/me.jpg %}" alt="" /></span> This company was founded in the 2022 by CEO and founder, Jon Eilers, to facilitate collaborations with a wide variety of organizations including non-profit's such as the Pacific Shellfish Institute, federal research labs at the USDA-ARS, professors at Walla Walla University, and international collaborations with researchers at the Max Planck Institute of Evolutionary Biology and Chinese Institute of Oceanography.
+        </p>
+
+        <p> Analytical genomics offers invaluable expertise and state-of-the-art bioinformatic services, but most importantly a passion for collaborative research that enriches the scientific community and expands our understanding of life. We have access to high-end servers enabling us to handle high-throughput experiments utilizing terabytes of data. This means when you work with Analytical Genomics you won't be hit with absurd cloud computation costs and hidden fees. When you work with us, you aren't just hiring a company to work for you, but a collaborator who is invested in your research.</p>
+	</div>
+</section>
+</div>

@@ -43,11 +43,10 @@
 			header {
 				position: relative;
 				z-index: 3;
-			}
+							}
 
 			h3 {
 				font-size: 1.75em;
-
 				a {
 					&:hover {
 						color: inherit !important;
@@ -92,7 +91,7 @@
 
 			&:hover {
 				&:before {
-					opacity: 0;
+					opacity: .6;
 				}
 			}
 

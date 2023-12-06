@@ -36,6 +36,12 @@
 			line-height: inherit;
 			padding: 0 1.5em;
 
+			img {
+				max-width: 100px; /* Adjust this value to fit your design */
+				height: auto; /* This maintains the aspect ratio */
+				border-radius: 15px;
+			}
+
 			strong {
 				@include vendor('transition', (
 					'background-color #{_duration(transition)} ease-in-out',

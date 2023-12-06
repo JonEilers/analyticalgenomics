@@ -1,11 +1,11 @@
 ---
 layout: home
 title: Home
-landing-title: 'Hi, my name is Forty'
+landing-title: 'Analytical Genomics, LLC'
 description: null
 image: null
 author: null
 show_tile: false
 ---
 
-Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+Analytical Genomics is a company dedicated to providing personalized bioinformatics services to researchers. We have expertise in genome assembly and annotation, single-cell and bulk differential gene expression analysis, chromatin conformation analysis, epigenetic analysis, population genetics, genotype-to-phenotype analysis, and gene evolutionary analysis. Our goal is to collaborate with your team to find answers to your scientific questions. 
