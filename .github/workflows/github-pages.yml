@@ -16,6 +16,7 @@ jobs:
           docker run \
             --volume ${{ github.workspace }}:/srv/jekyll \
             --volume ${{ github.workspace }}/_site:/srv/jekyll/_site \
+            --user 1001:121 \
             jekyll/jekyll \
             jekyll build
 
