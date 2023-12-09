@@ -1,30 +1,27 @@
-name: Build Jekyll site
+name: Cleanup bad PR
+
 on:
- push:
-   branches: ["main"]
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  pull_request_target:
+    types: [opened, reopened]
+
 jobs:
-  build:
+  close-pr:
     runs-on: ubuntu-latest
+    if: "contains(github.event.pull_request.body, 'by deleting this comment block') || github.event.pull_request.body == ''"
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Build
-        uses: actions/jekyll-build-pages@v1
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      - uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: 'Type: Invalid'
+      - uses: superbrothers/close-pull-request@v3
+        with:
+          # Optional. Post an issue comment just before closing a pull request.
+          comment: |
+            **You have created a Pull Request to the wrong repository.** This is the repository for [Minimal Mistakes][1], the free Jekyll theme. See [GitHub Docs: About pull requests][2] if you need help.
+
+              [1]: https://mmistakes.github.io/minimal-mistakes/
+              [2]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
+      - uses: sudo-bot/action-pull-request-lock@v1.0.5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.pull_request.number }}
+          lock-reason: spam
