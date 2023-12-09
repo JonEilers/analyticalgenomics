@@ -12,13 +12,8 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Build Jekyll site
-        run: |
-          docker run \
-            --volume ${{ github.workspace }}:/srv/jekyll \
-            --volume ${{ github.workspace }}/_site:/srv/jekyll/_site \
-            --user 1001:121 \
-            jekyll/jekyll \
-            jekyll build
+        run: docker run --rm -v ${{ github.workspace }}:/srv/jekyll jekyll/jekyll:4.2.0 jekyll build
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
