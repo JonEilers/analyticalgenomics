@@ -6,17 +6,17 @@ on:
       - master
 
 jobs:
-  github-pages:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Docker
+      - name: Pull Jekyll Docker Image
         run: docker pull jekyll/jekyll
 
       - name: Build with Jekyll in Docker
-        run: docker run --rm -v "$PWD:/srv/jekyll" jekyll/jekyll jekyll build
+        run: docker run --rm -v "$PWD:/srv/jekyll" -e JEKYLL_ENV=production jekyll/jekyll jekyll build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
