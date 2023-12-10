@@ -3,6 +3,7 @@ title: Analytical Genomics LLC
 email: jon.eilers@analyticalgenomics.org
 description: A bioinformatics company dedicated to providing genomics expertise and services with an emphasis on collaborative science 
 baseurl: "https://analyticalgenomics.org" # the subpath of your site, e.g. /blog
+#baseurl:  "/forty-jekyll-theme"
 url: # the base hostname & protocol for your site
 author: Jon Eilers
 street_address: 991 Summers circle
