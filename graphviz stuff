@@ -1,0 +1,92 @@
+digraph G {
+  graph [fontname = "Handlee", label="Genome Assembly", labelloc=t, fontsize=20, rankdir=LR];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+
+  "Contig Assembly (Long Read)" -> "Scaffolding (Hi-C and OGM)"
+  "Scaffolding (Hi-C and OGM)" -> "Assembly QC"
+  "Assembly QC" -> "Biological Contamination"
+  "Assembly QC" -> "Assembly Polishing (Short Read)"
+  "Assembly QC" -> "Gene Content (BUSCO)" 
+  "Assembly QC" -> "Summary Statistics (eg. N50)"
+}
+
+
+
+
+digraph G {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+
+"Data Types" -> "Short Reads"
+"Data Types" -> "Long Reads"
+"Data Types" -> "Optical Genome Mapping (OGM)"
+"Data Types" -> "Hi-C Long or Short Reads"
+"Data Types" -> "RNA-seq Long or Short Reads"
+}
+
+
+digraph G {
+  graph [fontname = "Handlee"label="Data Quality Control", labelloc=t, fontsize=20, rankdir=LR];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+
+"Data QC" -> "Read Quality Filtering"
+"Data QC" -> "Adapter Trimming"
+"Data QC" -> "K-mer Analysis"
+
+}
+
+
+digraph G {
+  graph [fontname = "Handlee", label="          Genome Annotation", labelloc=t, fontsize=20, rankdir=LR];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+
+  "RNA-seq Mapping" -> "Gene Model Prediction"
+  "Protein Database Mapping" -> "Gene Model Prediction"
+  "Repetitive Element Masking" -> "Gene Model Prediction"
+  "Gene Model Prediction" -> "Gene Model Analysis"
+  "Gene Model Prediction" -> "Functional Annotation"
+  "Gene Model Prediction" -> "Manual Curation"
+
+}
+
+
+
+digraph G {
+  graph [fontname = "Handlee", label="                          Genome Annotation", labelloc=t, fontsize=20, rankdir=LR];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+  
+  // Subgraph to align "Non-coding RNA" and "Other Annotations"
+  subgraph cluster_1 {
+    style=invis;
+    "Non-coding RNA" -> "Other Annotations"
+  }
+
+
+"Organelle Genome" -> "Other Annotations"
+
+ "Cis-regulatory Elements" -> "Other Annotations"
+ "CpG Islands" -> "Other Annotations"
+ "Low Complexity Regions" -> "Other Annotations"
+ "CTCF Binding Sites" -> "Other Annotations"
+ "Psuedogenes" -> "Other Annotations"
+ "Chromatin Accessibility" -> "Other Annotations"
+ "Repetitive Element Annotation" -> "Other Annotations"
+}
+
+
+
