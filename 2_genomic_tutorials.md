@@ -40,7 +40,7 @@ nav-menu: true
 		<header class="major">
 			<h2> So You Want to Sequence a Genome</h2>
 		</header>
-		<p>Genome sequencing projects are complex. If there is an organism you are considering sequencing the genome of, it can be overwhelming to try and understand the multistep process, especially when the necessary information is spread across journal articles, books, and websites. To ease the process of learning about genome sequencing and offer a resource for those who want to attempt it themselves, Analytical Genomics provides a readthedocs website dedicated to genome assembly and annotation bioinformatics which includes both tutorials, links to papers, and important caveats to be aware of when planning and executing a genome sequencing project.</p>
+		<p>Genome sequencing projects are complex, and understanding the multistep process can be overwhelming, especially when information is scattered across journal articles, books, and websites. If you're considering sequencing an organism's genome, Analytical Genomics offers a valuable resource. Our readthedocs website is dedicated to genome assembly and annotation bioinformatics. It features tutorials, links to papers, and important caveats to consider during the planning and execution of a genome sequencing project, making the learning process more accessible.</p>
 		<header class="minor center-text">
                 <h4><a class="link-button" href="https://genomes.readthedocs.io">Genome Assembly and Annotation Bioinformatics</a></h4>
 		</header>
